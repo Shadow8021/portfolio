@@ -2,10 +2,10 @@ export default function project() {
   const infos = [
     {
       id: 1,
-      titre: "saaS Dashboard",
-      image: "/iftpl.png",
+      titre: "Congo-sphere",
+      image: "/spher.png",
       descript:
-        "Plateforme d'analytics en temps réel avec visualisation de données avancée et rapports automatisés.",
+        "Plateforme de gestion d'éeènement réel avec visualisation de données avancée et rapports automatisés.",
       tech: [
         {
           bg: "bg-cyan-500/10",
@@ -26,10 +26,10 @@ export default function project() {
     },
     {
       id: 2,
-      titre: "E-Commerce Platform",
+      titre: "Site IFTPL",
       image: "/iftpl.png",
       descript:
-        "Solution e-commerce complète avec gestion d'inventaire, paiements sécurisés et tableau de bord vendeur.",
+        "Site officiel pour L'institut de formation technique et professionel de loudima, complète avec gestion d'inscription, paiements sécurisés et tableau de bord étudiant.",
       tech: [
         {
           bg: "bg-cyan-500/10",
@@ -50,10 +50,10 @@ export default function project() {
     },
     {
       id: 3,
-      titre: "Mobile App API",
-      image: "/iftpl.png",
+      titre: "Site ISGI",
+      image: "/isgi.png",
       descript:
-        "Backend robuste pour application mobile avec authentification OAuth, notifications push et sync offline.",
+        "Backend robuste pour le site officiel de L'institut superieur de gestion et d'ingenierie, intégrant des fonctionnalités avancées de gestion de contenu et d'authentification sécurisée.",
       tech: [
         {
           bg: "bg-cyan-500/10",
@@ -93,7 +93,7 @@ export default function project() {
               className="card-hover  group bg-slate-900/50 rounded-3xl border border-[#6969859f] overflow-hidden"
             >
               <div
-                className={`aspect-video bg-[url(${el.image})]  relative overflow-hidden`}
+                className={`aspect-video bg-[url(${el.image})] object-cover bg-md  relative overflow-hidden`}
               >
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-6xl">
