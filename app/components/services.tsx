@@ -22,9 +22,9 @@ export default function Services() {
             <span>Une approche, plusieurs terrains de jeu</span>
         </div>
 
-        <div className="service-grid">
+        <div className="service-grid ">
             {serves.map((el)=>(
-            <div key={el.id}>
+            <div key={el.id} className='mb-10'>
                <span className="service-index">{el.id}</span>
                 <h3>{el.nom}</h3>
                 <p>{el.descript}</p>

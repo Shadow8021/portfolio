@@ -289,7 +289,7 @@ h2 em {
 .work,
 .skills,
 .services {
-  padding-block: 110px 3px;
+  padding-block: 11px 3px;
 }
 
 .section-heading {
@@ -482,19 +482,20 @@ h2 em {
   background: var(--surface);
   color: var(--paper);
   max-width: none;
-  padding-inline: max(36px, calc((100% - 1180px) / 2));
+  padding-inline: max(3px, calc((100% - 1180px) / 2));
+  margin-top: 5px;
 }
 
 .service-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
-  margin-top: 65px;
+  margin-top: 18px;
 }
 
 .service-grid>div {
   border-left: 1px solid var(--line);
-  padding: 0 38px;
+  padding: 0 3px;
 }
 
 .service-grid>div:first-child {
