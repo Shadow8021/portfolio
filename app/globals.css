@@ -289,7 +289,7 @@ h2 em {
 .work,
 .skills,
 .services {
-  padding-block: 110px;
+  padding-block: 80px;
 }
 
 .section-heading {
@@ -563,7 +563,7 @@ h2 em {
   }
 
   .skills {
-    padding-inline: 20px;
+    padding-inline: 10px;
   }
 
   .skills-layout {

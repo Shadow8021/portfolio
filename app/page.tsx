@@ -9,7 +9,29 @@ import Project from "./components/project";
 
 export default function Home() {
   
-
+const skill = [
+  {
+    id: 1,
+    name: "Frontend",
+    description: "React · Next.js · TypeScript · Tailwind CSS · Framer Motion",
+  },
+  {
+    id: 2,
+    name: "Backend",
+    description: "Node.js · NestJS · PostgreSQL · REST · GraphQL",
+  },
+  {
+    id: 3,
+    name: "Cybersécurité",
+    description:
+      "Hardening · Sécurité applicative · Secret management · Audit · DevSecOps",
+  },
+  {
+    id: 4,
+    name: "Mobile & outils",
+    description: "React Native · Expo · Git · Docker · Figma",
+  },
+];
   return (
     <main>
       <section className="hero section-wrap" id="top">
@@ -73,9 +95,27 @@ export default function Home() {
          <Project/>
       </section>
 
-      <section className="skills section-wrap" id="skills">
-        <div className="section-heading"><p className="section-label">03 / Compétences</p><span>Les outils que j&apos;utilise au quotidien</span></div>
-        <div className="skills-layout"><div className="skills-intro"><h2>Une stack solide,<br /><em>sans dogme.</em></h2><p>Je choisis la technologie qui sert le mieux le produit, la qualité d&apos;expérience, la sécurité et l&apos;équipe qui va le faire vivre.</p></div><div className="skill-groups"><div className="skill-group"><span className="skill-index">01</span><div><h3>Frontend</h3><p>React · Next.js · TypeScript · Tailwind CSS · Framer Motion</p></div></div><div className="skill-group"><span className="skill-index">02</span><div><h3>Backend</h3><p>Node.js · NestJS · PostgreSQL · REST · GraphQL</p></div></div><div className="skill-group"><span className="skill-index">03</span><div><h3>Cybersécurité</h3><p>Hardening · Sécurité applicative · Secret management · Audit · DevSecOps</p></div></div><div className="skill-group"><span className="skill-index">04</span><div><h3>Mobile &amp; outils</h3><p>React Native · Expo · Git · Docker · Figma</p></div></div></div></div>
+      <section className="skills section-wrap " id="skills">
+        <div className="section-heading">
+          <p className="section-label">03 / Compétences</p><span>Les outils que j&apos;utilise au quotidien</span></div>
+        <div className="skills-layout">
+          <div className="skills-intro">
+            <h2>Une stack solide,<br /><em>sans dogme.</em></h2>
+            <p>Je choisis la technologie qui sert le mieux le produit, la qualité d&apos;expérience, la sécurité et l&apos;équipe qui va le faire vivre.</p>
+            </div>
+            <div className="skill-groups">
+              {skill.map((item) => (
+                <div className="skill-group" key={item.id}>
+                  <span className="skill-index">{String(item.id).padStart(2, '0')}</span>
+                  <div>
+                    <h3>{item.name}</h3>
+                    <p>{item.description}</p>
+                  </div>
+                </div>
+              ))}
+
+            </div>
+        </div>
       </section>
 
       
