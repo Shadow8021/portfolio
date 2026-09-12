@@ -60,7 +60,7 @@ export default function project() {
 
                         
   return (
-    <section id="projects" className="py-3 bg-red-700">
+    <section id="projects" className="py-3">
             <div className="max-w-7xl mx-auto px-6">
                 
 
