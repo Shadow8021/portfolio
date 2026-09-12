@@ -74,7 +74,7 @@ export default function project() {
                     
                     <div key={el.id} className="card-hover group bg-slate-900/50 rounded-3xl border border-slate-800/50 overflow-hidden">
                         <div
-                            className="aspect-video bg-gradient-to-br from-cyan-500/20 to-violet-500/20 relative overflow-hidden">
+                            className="aspect-video bg-linear-to-br from-cyan-500/20 to-violet-500/20 relative overflow-hidden">
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <div className="text-6xl">
                                     🚀
