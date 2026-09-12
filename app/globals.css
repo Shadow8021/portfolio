@@ -1000,24 +1000,54 @@ h2 em {
     left: 12px;
   }
 
-  .event-card {
-    flex-direction: column !important;
+  .timeline-item {
     align-items: stretch;
-    padding-left: 28px;
+    flex-direction: column !important;
+    gap: 0.75rem;
+    padding-left: 2rem;
+    min-height: auto;
   }
 
-  .event-card>.w-5\/12 {
+  .timeline-marker {
+    left: 12px !important;
+    right: auto !important;
+    top: 0.8rem !important;
+    bottom: auto !important;
+    transform: translateX(0) !important;
+  }
+
+  .timeline-year-column,
+  .timeline-card-column {
     width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-    text-align: left;
+    max-width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: left !important;
   }
 
-  .event-card>.w-5\/12:last-child {
-    margin-top: 12px;
+  .timeline-card-column {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
-  .event-card>.absolute {
-    left: 12px;
+  .timeline-item .timeline-year-column {
+    order: 1;
+  }
+
+  .timeline-item .timeline-card-column {
+    order: 2;
+  }
+
+  .timeline-year-column span {
+    display: inline-block;
+  }
+
+  .timeline-dot {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+
+  .card-expand {
+    padding: 1rem;
   }
 }

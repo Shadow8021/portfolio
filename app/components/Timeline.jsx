@@ -23,14 +23,14 @@ function TimelineCard({ event, index, expanded, onToggle }) {
 
   return (
     <article
-      className={`relative flex items-center animate-fade-in ${
+      className={`timeline-item relative flex items-center animate-fade-in ${
         isLeft ? "flex-row" : "flex-row-reverse"
       }`}
       style={{ animationDelay: `${index * 0.1}s` }}
     >
-      <div className="absolute left-1/2 z-10 -translate-x-1/2 ">
+      <div className="timeline-marker absolute left-1/2 z-10 -translate-x-1/2">
         <div
-          className={expanded ? "hidden translate-1.5": `timeline-dot h-3 w-3 rounded-full border-2`}
+          className={expanded ? "hidden translate-1.5" : `timeline-dot h-3 w-3 rounded-full border-2`}
           style={{
             backgroundColor: event.color,
             borderColor: event.color,
@@ -40,7 +40,7 @@ function TimelineCard({ event, index, expanded, onToggle }) {
       </div>
 
       <div
-        className={`w-5/12 ${
+        className={`timeline-year-column w-5/12 ${
           isLeft ? "pr-8 text-right" : "pl-8 text-left"
         }`}
       >
@@ -56,7 +56,7 @@ function TimelineCard({ event, index, expanded, onToggle }) {
         </span>
       </div>
 
-      <div className={`w-5/10 ${isLeft ? "pl-8" : "pr-8"}`}>
+      <div className={`timeline-card-column w-5/10 ${isLeft ? "pl-8" : "pr-8"}`}>
         <button
           type="button"
           onClick={() => onToggle(event.id)}
@@ -68,7 +68,7 @@ function TimelineCard({ event, index, expanded, onToggle }) {
           }}
           aria-expanded={expanded}
         >
-          <div className="flex items-start gap-3 ">
+          <div className="flex items-start gap-3">
             <span className="text-2xl">{event.emoji}</span>
 
             <div className="flex-1">
