@@ -1,8 +1,8 @@
 export const events = [
   {
     id: 1,
-    year: "2014",
-    title: "Premiers produits web",
+    year: "2020",
+    title: "Premiers projets web",
     civilization: "frontend",
     emoji: "⚡",
     color: "#ff6b4a",
@@ -14,7 +14,7 @@ export const events = [
   },
   {
     id: 2,
-    year: "2016",
+    year: "2021",
     title: "Du frontend au full-stack",
     civilization: "backend",
     emoji: "🧩",
@@ -27,7 +27,7 @@ export const events = [
   },
   {
     id: 3,
-    year: "2018",
+    year: "2022",
     title: "Industrialisation et qualité",
     civilization: "architecture",
     emoji: "🛠️",
@@ -39,33 +39,7 @@ export const events = [
       "🎯 Pratique : code review, Clean Architecture, CI/CD et observabilité.",
   },
   {
-    id: 4,
-    year: "2020",
-    title: "Applications mobiles et cloud",
-    civilization: "cloud",
-    emoji: "☁️",
-    color: "#8b5cf6",
-    summary: "J'accompagne des produits web et mobiles jusqu'à leur mise à l'échelle.",
-    details:
-      "Je développe des expériences cross-platform et je conçois leur socle cloud : authentification, stockage, déploiements et monitoring. Je m'intéresse autant au temps de réponse perçu qu'au coût et à la résilience en production.",
-    funFact:
-      "🎯 Stack : React Native, Next.js, AWS, Terraform et GitHub Actions.",
-  },
-  {
     id: 5,
-    year: "2022",
-    title: "Plateformes métier à fort trafic",
-    civilization: "backend",
-    emoji: "📈",
-    color: "#2f80ed",
-    summary: "Je conçois des backends fiables pour des équipes et des volumes en croissance.",
-    details:
-      "Je travaille sur la découpe de domaines, la performance des requêtes et la gestion des incidents. Les décisions techniques sont guidées par des métriques : disponibilité, latence, taux d'erreur et capacité de livraison.",
-    funFact:
-      "🎯 Priorités : contrats d'API, migrations maîtrisées, sécurité et résilience.",
-  },
-  {
-    id: 6,
     year: "2024",
     title: "Référent technique",
     civilization: "leadership",
@@ -73,12 +47,12 @@ export const events = [
     color: "#f2c94c",
     summary: "J'aligne architecture, produit et équipe autour de décisions simples et durables.",
     details:
-      "Après dix ans de pratique, j'aide les équipes à faire émerger les bons compromis : dette technique, vitesse de livraison, sécurité et maintenabilité. Je facilite les choix difficiles, je fais grandir les développeurs et je reste impliqué dans le code.",
+      "Après six ans de pratique, j'aide les équipes à faire émerger les bons compromis : dette technique, vitesse de livraison, sécurité et maintenabilité. Je facilite les choix difficiles, je fais grandir les développeurs et je reste impliqué dans le code.",
     funFact:
       "🎯 Transmission : mentoring, RFC techniques, pair programming et recrutement.",
   },
   {
-    id: 7,
+    id: 6,
     year: "2026",
     title: "Construire avec intention",
     civilization: "product",
@@ -86,8 +60,8 @@ export const events = [
     color: "#ff6b4a",
     summary: "Je transforme des problèmes complexes en produits numériques utiles et mesurables.",
     details:
-      "Aujourd'hui, j'interviens de la première conversation au suivi en production. Ma stack de prédilection combine Next.js, TypeScript, Node.js, PostgreSQL et AWS, avec une exigence constante sur l'accessibilité, la performance et la clarté du code.",
+      "Aujourd'hui, j'interviens de la première conversation au suivi en production. Ma stack de prédilection combine Next.js, TypeScript, Node.js, PostgreSQL et AWS, avec une exigence constante sur l'accessibilité, la performance, la sécurité et la clarté du code.",
     funFact:
-      "🎯 Stack actuelle : Next.js, React, TypeScript, Node.js, PostgreSQL, AWS et Docker.",
+      "🎯 Stack actuelle : Next.js, React, TypeScript, Node.js, PostgreSQL, AWS, Docker et culture de sécurité.",
   },
 ];

@@ -75,7 +75,7 @@ export default function Home() {
 
       <section className="skills section-wrap" id="skills">
         <div className="section-heading"><p className="section-label">03 / Compétences</p><span>Les outils que j&apos;utilise au quotidien</span></div>
-        <div className="skills-layout"><div className="skills-intro"><h2>Une stack solide,<br /><em>sans dogme.</em></h2><p>Je choisis la technologie qui sert le mieux le produit, la qualité d&apos;expérience et l&apos;équipe qui va le faire vivre.</p></div><div className="skill-groups"><div className="skill-group"><span className="skill-index">01</span><div><h3>Frontend</h3><p>React · Next.js · TypeScript · Tailwind CSS · Framer Motion</p></div></div><div className="skill-group"><span className="skill-index">02</span><div><h3>Backend</h3><p>Node.js · NestJS · PostgreSQL · REST · GraphQL</p></div></div><div className="skill-group"><span className="skill-index">03</span><div><h3>Mobile &amp; outils</h3><p>React Native · Expo · Git · Docker · AWS · Figma</p></div></div></div></div>
+        <div className="skills-layout"><div className="skills-intro"><h2>Une stack solide,<br /><em>sans dogme.</em></h2><p>Je choisis la technologie qui sert le mieux le produit, la qualité d&apos;expérience, la sécurité et l&apos;équipe qui va le faire vivre.</p></div><div className="skill-groups"><div className="skill-group"><span className="skill-index">01</span><div><h3>Frontend</h3><p>React · Next.js · TypeScript · Tailwind CSS · Framer Motion</p></div></div><div className="skill-group"><span className="skill-index">02</span><div><h3>Backend</h3><p>Node.js · NestJS · PostgreSQL · REST · GraphQL</p></div></div><div className="skill-group"><span className="skill-index">03</span><div><h3>Cybersécurité</h3><p>Hardening · Sécurité applicative · Secret management · Audit · DevSecOps</p></div></div><div className="skill-group"><span className="skill-index">04</span><div><h3>Mobile &amp; outils</h3><p>React Native · Expo · Git · Docker · Figma</p></div></div></div></div>
       </section>
 
       
@@ -149,7 +149,7 @@ export default function Home() {
           </h1>
 
           <p className="font-crimson text-lg italic text-[#c9a959]">
-            2014 — aujourd&apos;hui · 12 ans d&apos;expérience
+            2020 — aujourd&apos;hui · 6 ans d&apos;expérience
           </p>
         </div>
       </header>

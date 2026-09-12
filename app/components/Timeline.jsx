@@ -6,7 +6,6 @@ const filters = [
   { id: "frontend", label: "◈ Frontend" },
   { id: "backend", label: "⌘ Backend" },
   { id: "architecture", label: "◇ Architecture" },
-  { id: "cloud", label: "☁ Cloud" },
   { id: "leadership", label: "↗ Leadership" },
   { id: "product", label: "✦ Produit" },
 ];

@@ -20,7 +20,6 @@ interface TextTypeProps {
   textColors?: string[];
   variableSpeed?: { min: number; max: number };
   onSentenceComplete?: (sentence: string, index: number) => void;
-  startOnVisible?: boolean;
   reverseMode?: boolean;
 }
 
@@ -41,16 +40,13 @@ const TextType = ({
   textColors = [],
   variableSpeed,
   onSentenceComplete,
-  startOnVisible = false,
   reverseMode = false,
   ...props
 }: TextTypeProps & React.HTMLAttributes<HTMLElement>) => {
   const [displayedText, setDisplayedText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(!startOnVisible);
   const cursorRef = useRef<HTMLSpanElement>(null);
-  const containerRef = useRef<HTMLElement>(null);
 
   const textArray = useMemo(() => (Array.isArray(text) ? text : [text]), [text]);
 
@@ -66,24 +62,6 @@ const TextType = ({
   };
 
   useEffect(() => {
-    if (!startOnVisible || !containerRef.current) return;
-
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    observer.observe(containerRef.current);
-    return () => observer.disconnect();
-  }, [startOnVisible]);
-
-  useEffect(() => {
     if (showCursor && cursorRef.current) {
       gsap.set(cursorRef.current, { opacity: 1 });
       gsap.to(cursorRef.current, {
@@ -97,8 +75,6 @@ const TextType = ({
   }, [showCursor, cursorBlinkDuration]);
 
   useEffect(() => {
-    if (!isVisible) return;
-
     const currentText = textArray[currentTextIndex] ?? '';
     const targetText = reverseMode ? currentText.split('').reverse().join('') : currentText;
 
@@ -129,14 +105,14 @@ const TextType = ({
       return () => clearTimeout(timeout);
     }
 
-    if (isDeleting && displayedText === '') {
-      setIsDeleting(false);
-      setCurrentTextIndex(prev => (prev + 1) % textArray.length);
-      return;
-    }
-
     const timeout = setTimeout(() => {
       if (isDeleting) {
+        if (displayedText === '') {
+          setIsDeleting(false);
+          setCurrentTextIndex(prev => (prev + 1) % textArray.length);
+          return;
+        }
+
         setDisplayedText(prev => prev.slice(0, -1));
         return;
       }
@@ -155,7 +131,6 @@ const TextType = ({
     currentTextIndex,
     loop,
     initialDelay,
-    isVisible,
     reverseMode,
     variableSpeed,
     getRandomSpeed,
@@ -164,13 +139,11 @@ const TextType = ({
 
   const currentTargetText = textArray[currentTextIndex] ?? '';
   const processedText = reverseMode ? currentTargetText.split('').reverse().join('') : currentTargetText;
-  const shouldHideCursor =
-    hideCursorWhileTyping && (displayedText.length < processedText.length || isDeleting);
+  const shouldHideCursor = hideCursorWhileTyping && (displayedText.length < processedText.length || isDeleting);
 
   return createElement(
     Component,
     {
-      ref: containerRef,
       className: `inline-block whitespace-pre-wrap tracking-tight ${className}`,
       ...props
     },
