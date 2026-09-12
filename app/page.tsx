@@ -61,7 +61,7 @@ const skill = [
           </div>
         </div>
         <div className="hero-aside">
-          <div className="portrait-frame scale-100 bg-red-300 rounded-tl-[3.4rem] rounded-br-[3.4rem] rounded-tr-[1.9px] overflow-hidden relative">
+          <div className="portrait-frame scale-100 rounded-tl-[3.4rem] rounded-br-[3.4rem] rounded-tr-[1.9px] overflow-hidden relative">
             <Image src="/mart.jpg" alt="Portrait de Martial OYAGA, développeur full-stack" fill priority sizes="(max-width: 720px) 80vw, 34vw" />
           </div>
           <div className="portrait-note">
