@@ -77,7 +77,7 @@ export default function project() {
                             className="aspect-video bg-linear-to-br from-cyan-500/20 to-violet-500/20 relative overflow-hidden">
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <div className="text-6xl">
-                                    🚀
+                                    <span className="text-sm">{el.titre}</span>
                                 </div>
                             </div>
                             <div
