@@ -1006,6 +1006,7 @@ h2 em {
     gap: 0.75rem;
     padding-left: 2rem;
     min-height: auto;
+    width: 100%;
   }
 
   .timeline-marker {
@@ -1028,6 +1029,11 @@ h2 em {
   .timeline-card-column {
     padding-left: 0 !important;
     padding-right: 0 !important;
+    width: 100%;
+  }
+
+  .timeline-year-column {
+    width: 100%;
   }
 
   .timeline-item .timeline-year-column {
@@ -1049,5 +1055,10 @@ h2 em {
 
   .card-expand {
     padding: 1rem;
+    width: 100%;
+  }
+
+  .timeline-card-column .card-expand {
+    width: 100%;
   }
 }
