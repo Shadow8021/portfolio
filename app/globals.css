@@ -437,7 +437,7 @@ h2 em {
   padding-top: 75px;
 }
 
-.skills h2 {
+.eyes h2 {
   font-size: clamp(2.7rem, 5vw, 5rem);
   line-height: .98;
   letter-spacing: -.065em;
