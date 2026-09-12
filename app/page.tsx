@@ -21,12 +21,6 @@ const skill = [
     description: "Node.js · NestJS · PostgreSQL · REST · GraphQL",
   },
   {
-    id: 3,
-    name: "Cybersécurité",
-    description:
-      "Hardening · Sécurité applicative · Secret management · Audit · DevSecOps",
-  },
-  {
     id: 4,
     name: "Mobile & outils",
     description: "React Native · Expo · Git · Docker · Figma",
