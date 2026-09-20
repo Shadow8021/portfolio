@@ -11,10 +11,10 @@ export default function Navbar() {
     <nav className="border-b sticky top-0 right-0 z-50 border-[#404060] bg-[#0e0f23] text-[#f5f0e6] w-full h-18 flex items-center">
       <Contenaire className="flex w-full items-center  justify-between ">
          <a className="logo" href="#top" aria-label="Retour en haut" > 
-          <div className="flex flex-col justify-center items-center space-y-0">
+          <div className="flex flex-col items-center justify-center h-auto">
             <Image src={"/ico.png"} alt="logo" width={1000} height={1000} className="w-10 h-10 relative "/>
-           <span className="text-[8px] space-x-8  tracking-normal">G&apos;Martial Oyaga</span>
-           <div className="text-[7px]  space-x-7 tracking-normal">FULL STACK INGENEER</div>
+            <div className="text-[8px] tracking-normal text-[#f6f3efc4]">G&apos;Martial Oyaga</div>
+            <span className="text-[8px] font-light tracking-normal">FULL STACK INGENEER</span>
           </div>
           </a>
          <div className={`nav-links ${menuOpen ? "is-open" : ""}`}>
