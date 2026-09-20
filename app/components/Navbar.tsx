@@ -8,13 +8,13 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
     
   return (
-    <nav className="border-b sticky top-0 right-0 z-50 border-[#404060] bg-[#1a1a2e] text-[#f5f0e6] w-full h-18 flex items-center">
+    <nav className="border-b sticky top-0 right-0 z-50 border-[#404060] bg-[#0e0f23] text-[#f5f0e6] w-full h-18 flex items-center">
       <Contenaire className="flex w-full items-center  justify-between ">
          <a className="logo" href="#top" aria-label="Retour en haut" > 
-          <div className="flex flex-col">
-            <Image src={"/gregg.png"} alt="logo" width={10000} height={1000} className="w-18 "/>
-           <span className="text-lg hidden">G&apos;artial Oyaga</span>
-           <span className="text-sm hidden">FULL STACk INGENEER</span>
+          <div className="flex flex-col justify-center items-center space-y-0">
+            <Image src={"/ico.png"} alt="logo" width={1000} height={1000} className="w-10 h-10 relative "/>
+           <span className="text-[8px] space-x-8  tracking-normal">G&apos;Martial Oyaga</span>
+           <div className="text-[7px]  space-x-7 tracking-normal">FULL STACK INGENEER</div>
           </div>
           </a>
          <div className={`nav-links ${menuOpen ? "is-open" : ""}`}>
