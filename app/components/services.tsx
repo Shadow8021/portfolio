@@ -17,8 +17,9 @@ const serves = [
 export default function Services() {
   return (
     <section className="services section-wrap" id="services">
+        <p className="section-label">04 / Ce que je fais</p>
         <div className="section-heading">
-            <p className="section-label">04 / Ce que je fais</p>
+           
             <span>Une approche, plusieurs terrains de jeu</span>
         </div>
 

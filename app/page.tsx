@@ -89,7 +89,7 @@ const skill = [
          <Project/>
       </section>
 
-      <section className=" mt-10 eyes section-wrap" id="skills">
+      <section className=" my-10 eyes section-wrap" id="skills">
         <div className="section-heading">
           <p className="section-label">03 / Compétences</p><span>Les outils que j&apos;utilise au quotidien</span></div>
         <div className="skills-layout">
