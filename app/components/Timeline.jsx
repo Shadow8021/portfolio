@@ -69,7 +69,7 @@ function TimelineCard({ event, index, expanded, onToggle }) {
           aria-expanded={expanded}
         >
           <div className="flex items-start gap-3">
-            <span className="text-2xl">{event.emoji}</span>
+            <div className="text-2xl">{event.emoji}</div>
 
             <div className="flex-1">
               <h3 className="font-cinzel text-base font-semibold text-[#f5f0e6]">
