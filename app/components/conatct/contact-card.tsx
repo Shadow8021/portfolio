@@ -1,5 +1,5 @@
 import { Mail } from "lucide-react";
-import { FaLinkedinIn, FaFacebookF } from "react-icons/fa";
+import { FaLinkedinIn, FaFacebookF,FaGithub } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
@@ -26,6 +26,11 @@ const socials=[{
   href: "mailto:gregoyaga@gmail.com",
   label: "Email",
   lucideIcon: Mail
+},{
+  internal: false,
+  href: "https://github.com/Shadow8021",
+  label: "GitHub",
+  lucideIcon: FaGithub
 }
 ]
 

@@ -3,6 +3,7 @@ import { useState } from "react"
 import Contenaire from "./Contenaire"
 import Link from "next/link"
 import Image from "next/image"
+
 export default function Navbar() {
   const navItems = ["Work", "Skills", "Services", "About", "Contact"];  
   const [menuOpen, setMenuOpen] = useState(false)
@@ -21,7 +22,9 @@ export default function Navbar() {
           {navItems.map((item) => (
             <Link key={item} href={`#${item.toLowerCase()}`} onClick={() => setMenuOpen(false)}>{item}</Link>
           ))}
+         
         </div>
+         
         <a className="nav-cta" href="#contact">Discutons <span>↗</span></a>
         <button className="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
           <span /> <span />
