@@ -1,16 +1,36 @@
 "use client";
-import { useState } from "react";
+import { Moon, Sun } from "lucide-react";
+import { useEffect, useState } from "react";
 import Contenaire from "./Contenaire";
 import Link from "next/link";
 import Image from "next/image";
 
+type Theme = "dark" | "light";
+
 export default function Navbar() {
   const navItems = ["Work", "Skills", "Services", "About", "Contact"];
   const [menuOpen, setMenuOpen] = useState(false);
+  const [theme, setTheme] = useState<Theme>("dark");
+
+  useEffect(() => {
+    setTheme(document.documentElement.dataset.theme === "light" ? "light" : "dark");
+  }, []);
+
+  function toggleTheme() {
+    const nextTheme: Theme = theme === "dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = nextTheme;
+    setTheme(nextTheme);
+
+    try {
+      localStorage.setItem("portfolio-theme", nextTheme);
+    } catch (error) {
+      console.error("Impossible d'enregistrer le thème choisi.", error);
+    }
+  }
 
   return (
-    <nav className="border-b sticky top-0 right-0 z-50 border-[#404060] bg-[#0e0f23] text-[#f5f0e6] w-full h-18 flex items-center">
-      <Contenaire className="flex w-full items-center  justify-between ">
+    <nav className="border-b sticky top-0 right-0 z-50 border-[var(--line)] bg-[var(--ink)] text-[var(--paper)] w-full h-18 flex items-center">
+      <Contenaire className="flex w-full items-center justify-between">
         <a className="logo" href="#top" aria-label="Retour en haut">
           <div className="flex flex-col items-center justify-center h-auto">
             <Image
@@ -20,7 +40,7 @@ export default function Navbar() {
               height={100}
               className="w-6 h-6 relative "
             />
-            <div className="text-[10px] tracking-normal text-[#f6f3efc4]">
+            <div className="text-[10px] tracking-normal text-[var(--muted)]">
               G&apos;Martial Oyaga
             </div>
             <span className="text-[5px] font-light tracking-normal">
@@ -40,20 +60,34 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div>
+        <div className="flex items-center gap-4">
           <a className="nav-cta" href="#contact">
             Discutons <span>↗</span>
           </a>
+          <button
+            className="theme-toggle"
+            type="button"
+            onClick={toggleTheme}
+            aria-label={theme === "dark" ? "Activer le mode clair" : "Activer le mode sombre"}
+            aria-pressed={theme === "light"}
+            title={theme === "dark" ? "Activer le mode clair" : "Activer le mode sombre"}
+          >
+            {theme === "dark" ? (
+              <Sun size={18} aria-hidden="true" />
+            ) : (
+              <Moon size={18} aria-hidden="true" />
+            )}
+          </button>
+          <button
+            className="menu-toggle"
+            type="button"
+            aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <span /> <span />
+          </button>
         </div>
-        <button
-          className="menu-toggle"
-          type="button"
-          aria-label="Ouvrir le menu"
-          aria-expanded={menuOpen}
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          <span /> <span />
-        </button>
       </Contenaire>
     </nav>
   );

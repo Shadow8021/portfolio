@@ -23,11 +23,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html lang="fr" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try {
+  const savedTheme = localStorage.getItem("portfolio-theme");
+  if (savedTheme === "light") document.documentElement.dataset.theme = "light";
+} catch (error) {
+  console.error("Impossible de charger le thème enregistré.", error);
+}`,
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar/>
+        <Navbar />
         {children}
       </body>
     </html>
