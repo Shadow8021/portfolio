@@ -33,7 +33,7 @@ export default function Navbar() {
               height={100}
               className="w-6 h-6 relative "
             />
-            <div className="text-[10px] tracking-normal text-[var(--muted)]">
+            <div className="text-[10px] tracking-normal text-(--muted)">
               G&apos;Martial Oyaga
             </div>
             <span className="text-[5px] font-light tracking-normal">
