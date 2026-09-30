@@ -227,7 +227,7 @@ export default function Home() {
           </div>
         </header>
 
-        {/* <Timeline /> */}
+        <Timeline />
       </div>
     </main>
   );
