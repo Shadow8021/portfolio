@@ -3,6 +3,7 @@ export default function project() {
     {
       id: 1,
       titre: "saaS Dashboard",
+      image: "/iftpl.png",
       descript:
         "Plateforme d'analytics en temps réel avec visualisation de données avancée et rapports automatisés.",
       tech: [
@@ -26,6 +27,7 @@ export default function project() {
     {
       id: 2,
       titre: "E-Commerce Platform",
+      image: "/iftpl.png",
       descript:
         "Solution e-commerce complète avec gestion d'inventaire, paiements sécurisés et tableau de bord vendeur.",
       tech: [
@@ -49,6 +51,7 @@ export default function project() {
     {
       id: 3,
       titre: "Mobile App API",
+      image: "/iftpl.png",
       descript:
         "Backend robuste pour application mobile avec authentification OAuth, notifications push et sync offline.",
       tech: [
@@ -87,9 +90,11 @@ export default function project() {
           {infos.map((el) => (
             <div
               key={el.id}
-              className="card-hover group bg-slate-900/50 rounded-3xl border border-[#6969859f] overflow-hidden"
+              className="card-hover  group bg-slate-900/50 rounded-3xl border border-[#6969859f] overflow-hidden"
             >
-              <div className="aspect-video bg-linear-to-br from-cyan-500/20 to-violet-500/20 relative overflow-hidden">
+              <div
+                className={`aspect-video bg-[url(${el.image})] relative overflow-hidden`}
+              >
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-6xl">
                     <span className="text-sm">{el.titre}</span>
