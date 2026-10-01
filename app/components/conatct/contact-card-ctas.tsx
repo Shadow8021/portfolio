@@ -15,7 +15,7 @@ export function ContactCardCtas(): ReactNode {
       <motion.div
         layout
         transition={{ layout: { duration: 0.55, ease: EASE } }}
-        className="mt-2 flex flex-wrap items-center gap-3"
+        className="hidden mt-2 md:flex flex-wrap items-center gap-3"
       >
         <ContactButton />
 

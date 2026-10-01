@@ -13,7 +13,8 @@ export default function Home() {
     {
       id: 1,
       name: "Frontend",
-      description: "React · Next.js · TypeScript · Tailwind CSS · Figma ",
+      description:
+        "React · Next.js · TypeScript · Tailwind CSS · Figma · Framer Motion",
     },
     {
       id: 2,
@@ -155,7 +156,7 @@ export default function Home() {
       <section id="services">
         <Services />
       </section>
-      <section className="contact section-wrap" id="contact">
+      <section className="contact" id="contact">
         <p className="section-label">05 / Contact</p>
         <ContactCard />
       </section>
