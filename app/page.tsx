@@ -96,7 +96,7 @@ export default function Home() {
               <NetworkAnimation />
             </div>
             <div className="flex-1  h-80 max-w-155">
-              <h2 className=" text-[35px] md:text-7xl font-bold">
+              <h2 className=" text-2xl md:text-7xl font-bold">
                 Du premier croquis à la mise en ligne.
               </h2>
               <p className="large-copy">
@@ -125,7 +125,7 @@ export default function Home() {
 
         <div className="skills-layout">
           <div className="skills-intro">
-            <h2 className="text-[35px] md:text-7xl font-bold">
+            <h2 className="text-2xl md:text-7xl font-bold">
               Une stack solide,
               <br />
               <em>sans dogme.</em>
