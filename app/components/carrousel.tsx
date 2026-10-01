@@ -16,6 +16,10 @@ const technologies = [
   { name: "PHP", Icon: "php" },
   { name: "C++", Icon: "cpp" },
   { name: "SQLite", Icon: "sqlite" },
+  { name: "VS Code", Icon: "vscode" },
+  { name: "Android Studio", Icon: "androidstudio" },
+  { name: "Postman", Icon: "postman" },
+  { name: "PyCharm", Icon: "pycharm" },
 ];
 
 function TechnologyList({ duplicate = false }: { duplicate?: boolean }) {
