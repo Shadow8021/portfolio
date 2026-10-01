@@ -161,10 +161,7 @@ export default function Home() {
         <ContactCard />
       </section>
 
-      <div
-        className="min-h-screen w-full overflow-auto bg-papyrus"
-        style={{ backgroundColor: "#1a1a2e" }}
-      >
+      <div className="timeline-shell bg-papyrus min-h-screen w-full overflow-auto">
         <header className="relative px-4 py-8 text-center">
           <div className="absolute inset-0 overflow-hidden">
             <div

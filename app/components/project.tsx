@@ -78,10 +78,10 @@ export default function project() {
     <section id="projects" className="py-3">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-1">
-          <h2 className="text-2xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="portfolio-project-title text-2xl md:text-5xl font-bold mb-6">
             Projets Sélectionnés
           </h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+          <p className="portfolio-project-description text-lg max-w-2xl mx-auto">
             Des solutions sur mesure qui répondent à des défis réels et génèrent
             un impact mesurable.
           </p>
@@ -90,7 +90,7 @@ export default function project() {
           {infos.map((el) => (
             <div
               key={el.id}
-              className="card-hover  group bg-slate-900/50 rounded-3xl border border-[#6969859f] overflow-hidden"
+              className="portfolio-project-card card-hover group rounded-3xl border overflow-hidden"
             >
               <div
                 className={`aspect-video bg-[url(${el.image})] object-cover bg-md  relative overflow-hidden`}
@@ -100,7 +100,7 @@ export default function project() {
                     <span className="text-sm">{el.titre}</span>
                   </div>
                 </div>
-                <div className="absolute inset-0 bg-slate-950/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+                <div className="portfolio-project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
                   <a
                     href="#"
                     className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors"
@@ -136,10 +136,10 @@ export default function project() {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-md md:text-xl font-bold text-white mb-2">
+                <h3 className="portfolio-project-name text-md md:text-xl font-bold mb-2">
                   {el.titre}
                 </h3>
-                <p className="text-slate-400 mb-4 text-sm leading-relaxed">
+                <p className="portfolio-project-copy mb-4 text-sm leading-relaxed">
                   {el.descript}
                 </p>
                 <div className="flex flex-wrap gap-2">
