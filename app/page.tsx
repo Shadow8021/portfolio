@@ -3,6 +3,7 @@ import Image from "next/image";
 import Timeline from "./components/Timeline";
 import { ContactCard } from "./components/conatct/contact-card";
 import Services from "./components/services";
+import Carrousel from "./components/carrousel";
 import NetworkAnimation from "./components/ui/anime";
 import TextType from "./components/ui/TextType";
 import Project from "./components/project";
@@ -149,6 +150,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Carrousel />
 
       <section id="services">
         <Services />

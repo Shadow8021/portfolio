@@ -305,6 +305,67 @@ h2 em {
   font-size: 0.72rem;
 }
 
+.tech-marquee {
+  width: 100%;
+  overflow: hidden;
+  padding-block: 26px;
+  border-block: 1px solid var(--line);
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.tech-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: tech-marquee-scroll 34s linear infinite;
+}
+
+.tech-marquee:hover .tech-marquee-track {
+  animation-play-state: paused;
+}
+
+.tech-marquee-list {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: clamp(34px, 6vw, 88px);
+  padding: 0 clamp(17px, 3vw, 44px);
+  margin: 0;
+  list-style: none;
+}
+
+.tech-marquee-item {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tech-marquee-item svg {
+  width: 25px;
+  height: 25px;
+  color: var(--lime);
+}
+
+@keyframes tech-marquee-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-marquee-track {
+    animation: none;
+  }
+
+  .tech-marquee-list[aria-hidden="true"] {
+    display: none;
+  }
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

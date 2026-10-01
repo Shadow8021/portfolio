@@ -16,9 +16,9 @@ export default function Navbar() {
             <Image
               src={"/ico.png"}
               alt="logo"
-              width={1000}
-              height={1000}
-              className="w-10 h-10 relative "
+              width={100}
+              height={100}
+              className="w-8 h-8 relative "
             />
             <div className="text-[8px] tracking-normal text-[#f6f3efc4]">
               G&apos;Martial Oyaga
