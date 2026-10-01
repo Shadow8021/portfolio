@@ -309,14 +309,20 @@ h2 em {
   width: 100%;
   overflow: hidden;
   padding-block: 26px;
-  border-block: 1px solid var(--line);
-  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
 }
 
 .tech-marquee-track {
   display: flex;
   width: max-content;
-  animation: tech-marquee-scroll 34s linear infinite;
+  animation: tech-marquee-scroll 24s linear infinite;
 }
 
 .tech-marquee:hover .tech-marquee-track {
