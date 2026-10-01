@@ -504,14 +504,6 @@ h2 em {
   padding-top: 75px;
 }
 
-.eyes h2 {
-  font-size: clamp(2.7rem, 5vw, 5rem);
-  line-height: 0.98;
-  letter-spacing: -0.065em;
-  font-weight: 600;
-  margin: 0 0 28px;
-}
-
 .skills-intro > p {
   color: var(--muted);
   max-width: 350px;

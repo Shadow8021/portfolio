@@ -96,7 +96,7 @@ export default function Home() {
               <NetworkAnimation />
             </div>
             <div className="flex-1  h-80 max-w-155">
-              <h2 className="text-6xl font-bold">
+              <h2 className=" text-[35px] md:text-7xl font-bold">
                 Du premier croquis à la mise en ligne.
               </h2>
               <p className="large-copy">
@@ -117,14 +117,15 @@ export default function Home() {
         <Project />
       </section>
 
-      <section className=" my-10 eyes section-wrap" id="skills">
+      <section className=" my-10 section-wrap" id="skills">
         <div className="section-heading">
           <p className="section-label">03 / Compétences</p>
           <span>Les outils que j&apos;utilise au quotidien</span>
         </div>
+
         <div className="skills-layout">
           <div className="skills-intro">
-            <h2>
+            <h2 className="text-[35px] md:text-7xl font-bold">
               Une stack solide,
               <br />
               <em>sans dogme.</em>
