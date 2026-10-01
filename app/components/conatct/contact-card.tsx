@@ -38,7 +38,8 @@ const socials = [
 
 export function ContactCard(): ReactNode {
   return (
-    <section className=" my-12 w-full max-w-full px-3 md:px-6 sm:my-2 sm:px-10 ">
+    <section className=" my-12 w-full mx-auto max-w-full  px-3 md:px-6 sm:my-2 sm:px-10 ">
+      <p className="section-label">05 / Contact</p>
       <FadeIn>
         <div className="contact-card-shell relative w-full overflow-hidden rounded-4xl border p-1.5 shadow-sm">
           <div className="contact-card-inner  relative w-full overflow-hidden rounded-[1.6rem]">
@@ -60,11 +61,11 @@ export function ContactCard(): ReactNode {
 
             <div className="relative flex flex-col justify-evenly md:flex-row gap-8 p-6 sm:gap-1 sm:p-7 md:items-stretch md:gap-6 md:p-6">
               <div className="contact-card-copy flex flex-col gap-5">
-                <h2 className="contact-card-title text-[28px] font-semibold leading-[1.2] sm:text-xl">
+                <h2 className="text-[25px] md:text-[48px] font-semibold leading-[1.2] ">
                   Une idée en tête ?<br />
                   <em>Faisons-la exister.</em>
                 </h2>
-                <p className="contact-card-description mb-6 max-w-[29ch] text-[18px] leading-[1.4] tracking-tight sm:text-[22px]">
+                <p className="contact-card-description mb-6 max-w-[29ch] text-[15px] md:text-[18px] leading-[1.4] tracking-tight sm:text-[22px]">
                   I&rsquo;m always open to discussing new projects, creative
                   ideas, or opportunities to be part of your visions. Just reach
                   out!

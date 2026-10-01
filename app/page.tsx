@@ -156,8 +156,7 @@ export default function Home() {
       <section id="services">
         <Services />
       </section>
-      <section className="contact" id="contact">
-        <p className="section-label">05 / Contact</p>
+      <section className="mt-10 mx-auto max-w-[88%]" id="contact">
         <ContactCard />
       </section>
 
