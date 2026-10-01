@@ -18,17 +18,17 @@ export default function Navbar() {
               alt="logo"
               width={100}
               height={100}
-              className="w-8 h-8 relative "
+              className="w-6 h-6 relative "
             />
-            <div className="text-[8px] tracking-normal text-[#f6f3efc4]">
+            <div className="text-[10px] tracking-normal text-[#f6f3efc4]">
               G&apos;Martial Oyaga
             </div>
-            <span className="text-[8px] font-light tracking-normal">
+            <span className="text-[5px] font-light tracking-normal">
               FULL STACK INGENEER
             </span>
           </div>
         </a>
-        <div className={`nav-links ${menuOpen ? "is-open " : ""}`}>
+        <div className={` mr-14 nav-links ${menuOpen ? "is-open " : ""}`}>
           {navItems.map((item) => (
             <Link
               key={item}
@@ -40,9 +40,11 @@ export default function Navbar() {
           ))}
         </div>
 
-        <a className="nav-cta" href="#contact">
-          Discutons <span>↗</span>
-        </a>
+        <div>
+          <a className="nav-cta" href="#contact">
+            Discutons <span>↗</span>
+          </a>
+        </div>
         <button
           className="menu-toggle"
           type="button"
