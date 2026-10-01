@@ -13,18 +13,17 @@ export default function Home() {
     {
       id: 1,
       name: "Frontend",
-      description:
-        "React · Next.js · TypeScript · Tailwind CSS · Framer Motion",
+      description: "React · Next.js · TypeScript · Tailwind CSS · Figma ",
     },
     {
       id: 2,
       name: "Backend",
-      description: "Node.js · NestJS · PostgreSQL · REST · GraphQL",
+      description: "Node.js · NestJS · PostgreSQL · MySQL · Laravel",
     },
     {
       id: 4,
       name: "Mobile & outils",
-      description: "React Native · Expo · Git · Docker · Figma",
+      description: "Flutter · Jest · Git · Docker · Figma",
     },
   ];
   return (
