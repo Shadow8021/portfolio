@@ -60,11 +60,9 @@ function TimelineCard({ event, index, expanded, onToggle }) {
         <button
           type="button"
           onClick={() => onToggle(event.id)}
-          className="card-expand block w-full cursor-pointer rounded-xl p-4 text-left hover:-translate-y-1"
+          className="timeline-card card-expand block w-full cursor-pointer rounded-xl p-4 text-left hover:-translate-y-1"
           style={{
-            backgroundColor: "#2d2d44",
             borderLeft: `4px solid ${event.color}`,
-            boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
           }}
           aria-expanded={expanded}
         >
@@ -72,11 +70,11 @@ function TimelineCard({ event, index, expanded, onToggle }) {
             <div className="text-2xl">{event.emoji}</div>
 
             <div className="flex-1">
-              <h3 className="font-cinzel text-base font-semibold text-[#f5f0e6]">
+              <h3 className="timeline-card-title font-cinzel text-base font-semibold">
                 {event.title}
               </h3>
 
-              <p className="mt-1 font-crimson text-sm text-[#a9a9a9]">
+              <p className="timeline-card-summary mt-1 font-crimson text-sm">
                 {event.summary}
               </p>
             </div>
@@ -94,10 +92,9 @@ function TimelineCard({ event, index, expanded, onToggle }) {
           <div className={`card-content ${expanded ? "expanded" : ""}`}>
             <div className="card-inner">
               <div
-                className="mt-4 border-t pt-4"
-                style={{ borderColor: "#404060" }}
+                className="timeline-card-details mt-4 border-t pt-4"
               >
-                <p className="font-crimson text-sm leading-relaxed text-[#d0d0d0]">
+                <p className="font-crimson text-sm leading-relaxed">
                   {event.details}
                 </p>
 
@@ -158,14 +155,9 @@ export default function Timeline() {
                 key={item.id}
                 type="button"
                 onClick={() => setFilter(item.id)}
-                className={`civilization-filter rounded-full px-4 py-2 font-cinzel text-sm transition-all duration-300 hover:scale-105 ${
+                className={`timeline-filter civilization-filter rounded-full px-4 py-2 font-cinzel text-sm transition-all duration-300 hover:scale-105 ${
                   active ? "active" : ""
                 }`}
-                style={{
-                  backgroundColor: "#2d2d44",
-                  color: "#f5f0e6",
-                  border: `2px solid ${active ? "#d4af37" : "transparent"}`,
-                }}
               >
                 {item.label}
               </button>
@@ -177,7 +169,7 @@ export default function Timeline() {
       <main className="relative px-4 pb-12">
         <div
           className="timeline-line absolute left-1/2 h-full w-1 -translate-x-1/2 transform rounded-full"
-          style={{ "--line-color": "#d4af37", opacity: 0.4 }}
+          style={{ "--line-color": "var(--coral)", opacity: 0.4 }}
         />
 
         <div className="relative mx-auto max-w-4xl space-y-8">
