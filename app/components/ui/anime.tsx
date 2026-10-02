@@ -13,10 +13,10 @@ const nodes = [
 
 export default function NetworkAnimation() {
   return (
-    <section className="relative mx-auto flex h-[260px] w-full max-w-[560px] items-center justify-center overflow-hidden sm:h-[300px] lg:h-[340px]">
+    <section className="network-animation relative mx-auto flex h-[260px] w-full max-w-[560px] items-center justify-center overflow-hidden sm:h-[300px] lg:h-[340px]">
       
       {/* Halo général */}
-      <div className="absolute left-1/2 top-1/2 h-[220px] w-[220px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-700/10 blur-[80px] sm:h-[260px] sm:w-[260px]" />
+      <div className="network-halo absolute left-1/2 top-1/2 h-[220px] w-[220px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[80px] sm:h-[260px] sm:w-[260px]" />
 
       <div className="relative h-full w-full max-w-[520px]">
 
@@ -81,10 +81,10 @@ export default function NetworkAnimation() {
         <div className="absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2">
           
           {/* Glow */}
-          <div className="absolute inset-[-45px] rounded-[35px] bg-violet-700/20 blur-[35px]" />
+          <div className="central-glow absolute inset-[-45px] rounded-[35px] blur-[35px]" />
 
           {/* Bloc central */}
-          <div className="central-card relative flex h-[110px] w-[110px] items-center justify-center rounded-[27px] border border-violet-600 bg-[#09090d] shadow-[0_0_35px_rgba(109,40,217,0.35)] sm:h-[120px] sm:w-[120px]">
+          <div className="central-card relative flex h-[110px] w-[110px] items-center justify-center rounded-[27px] sm:h-[120px] sm:w-[120px]">
             
             {/* Icon Layers */}
             <svg
@@ -92,45 +92,99 @@ export default function NetworkAnimation() {
               height="58"
               viewBox="0 0 58 58"
               fill="none"
-              className="relative z-10"
+              className="network-icon relative z-10"
             >
               <path
                 d="M29 10L49 21L29 32L9 21L29 10Z"
-                stroke="#5B21FF"
+                stroke="currentColor"
                 strokeWidth="3"
                 strokeLinejoin="round"
               />
 
               <path
                 d="M9 29L29 40L49 29"
-                stroke="#5B21FF"
+                stroke="currentColor"
                 strokeWidth="3"
                 strokeLinejoin="round"
               />
 
               <path
                 d="M9 37L29 48L49 37"
-                stroke="#5B21FF"
+                stroke="currentColor"
                 strokeWidth="3"
                 strokeLinejoin="round"
               />
             </svg>
 
             {/* Pulse */}
-            <div className="absolute inset-0 rounded-[27px] border border-violet-500/50 central-pulse" />
+            <div className="central-pulse absolute inset-0 rounded-[27px] border" />
           </div>
         </div>
       </div>
 
       {/* Animation CSS */}
       <style>{`
-        .network-line {
-          stroke: rgba(255, 255, 255, 0.10);
+        .network-animation {
+          --network-line-color: rgba(255, 255, 255, 0.10);
+          --network-flow-color: #5425ff;
+          --network-flow-glow: rgba(84, 37, 255, 0.8);
+          --network-node-border: rgba(255, 255, 255, 0.12);
+          --network-node-background: radial-gradient(
+            circle at center,
+            rgba(76, 29, 149, 0.08),
+            rgba(7, 7, 10, 0.8)
+          );
+          --network-node-shadow: rgba(255, 255, 255, 0.015);
+          --network-dot-background: #3416b8;
+          --network-dot-shadow: #4c1dff;
+          --network-dot-glow: rgba(76, 29, 255, 0.8);
+          --network-halo-color: rgba(109, 40, 217, 0.1);
+          --network-central-glow: rgba(109, 40, 217, 0.2);
+          --network-central-background: #09090d;
+          --network-central-border: #5b21ff;
+          --network-central-shadow: rgba(109, 40, 217, 0.35);
+          --network-icon-color: #8b5cf6;
+          --network-pulse-border: rgba(139, 92, 246, 0.5);
+        }
+
+        html[data-theme="light"] .network-animation {
+          --network-line-color: rgba(32, 35, 43, 0.16);
+          --network-flow-color: #9b7410;
+          --network-flow-glow: rgba(155, 116, 16, 0.65);
+          --network-node-border: rgba(32, 35, 43, 0.16);
+          --network-node-background: radial-gradient(
+            circle at center,
+            rgba(155, 116, 16, 0.12),
+            rgba(255, 253, 247, 0.92)
+          );
+          --network-node-shadow: rgba(32, 35, 43, 0.06);
+          --network-dot-background: #87620c;
+          --network-dot-shadow: #9b7410;
+          --network-dot-glow: rgba(155, 116, 16, 0.7);
+          --network-halo-color: rgba(155, 116, 16, 0.1);
+          --network-central-glow: rgba(155, 116, 16, 0.18);
+          --network-central-background: #fffdf7;
+          --network-central-border: #9b7410;
+          --network-central-shadow: rgba(155, 116, 16, 0.24);
+          --network-icon-color: #87620c;
+          --network-pulse-border: rgba(155, 116, 16, 0.45);
+        }
+
+        .network-animation .network-halo {
+          background-color: var(--network-halo-color);
+        }
+
+        .network-animation .central-glow {
+          background-color: var(--network-central-glow);
+        }
+
+        .network-animation .network-line {
+          stroke: var(--network-line-color);
           stroke-width: 0.35;
         }
 
-        .network-flow {
-          stroke: #5425ff;
+        .network-animation .network-flow {
+          stroke: var(--network-flow-color);
           stroke-width: 0.55;
           stroke-linecap: round;
 
@@ -138,8 +192,8 @@ export default function NetworkAnimation() {
           stroke-dashoffset: 100;
 
           filter:
-            drop-shadow(0 0 2px #5425ff)
-            drop-shadow(0 0 5px rgba(84, 37, 255, 0.8));
+            drop-shadow(0 0 2px var(--network-flow-color))
+            drop-shadow(0 0 5px var(--network-flow-glow));
 
           animation: flow 2.8s linear infinite;
         }
@@ -168,11 +222,11 @@ export default function NetworkAnimation() {
           }
         }
 
-        .node-wrapper {
+        .network-animation .node-wrapper {
           position: relative;
         }
 
-        .node {
+        .network-animation .node {
           width: 60px;
           height: 60px;
 
@@ -180,34 +234,29 @@ export default function NetworkAnimation() {
           align-items: center;
           justify-content: center;
 
-          border: 1px solid rgba(255, 255, 255, 0.12);
+          border: 1px solid var(--network-node-border);
           border-radius: 17px;
 
-          background:
-            radial-gradient(
-              circle at center,
-              rgba(76, 29, 149, 0.08),
-              rgba(7, 7, 10, 0.8)
-            );
+          background: var(--network-node-background);
 
           box-shadow:
-            inset 0 0 20px rgba(255, 255, 255, 0.015);
+            inset 0 0 20px var(--network-node-shadow);
 
           animation: nodeFloat 4s ease-in-out infinite;
         }
 
-        .node-dot {
+        .network-animation .node-dot {
           width: 10px;
           height: 10px;
 
           border-radius: 50%;
 
-          background: #3416b8;
+          background: var(--network-dot-background);
 
           box-shadow:
-            0 0 5px #4c1dff,
-            0 0 12px rgba(76, 29, 255, 0.8),
-            0 0 25px rgba(76, 29, 255, 0.35);
+            0 0 5px var(--network-dot-shadow),
+            0 0 12px var(--network-dot-glow),
+            0 0 25px var(--network-dot-glow);
 
           animation: dotPulse 2.2s ease-in-out infinite;
         }
@@ -236,7 +285,18 @@ export default function NetworkAnimation() {
           }
         }
 
-        .central-pulse {
+        .network-animation .central-card {
+          border: 1px solid var(--network-central-border);
+          background: var(--network-central-background);
+          box-shadow: 0 0 35px var(--network-central-shadow);
+        }
+
+        .network-animation .network-icon {
+          color: var(--network-icon-color);
+        }
+
+        .network-animation .central-pulse {
+          border-color: var(--network-pulse-border);
           animation: centralPulse 2.5s ease-in-out infinite;
         }
 
@@ -254,24 +314,24 @@ export default function NetworkAnimation() {
         }
 
         @media (max-width: 640px) {
-          .node {
+          .network-animation .node {
             width: 42px;
             height: 42px;
             border-radius: 13px;
           }
 
-          .node-dot {
+          .network-animation .node-dot {
             width: 7px;
             height: 7px;
           }
 
-          .central-card {
+          .network-animation .central-card {
             width: 90px;
             height: 90px;
             border-radius: 21px;
           }
 
-          .central-card svg {
+          .network-animation .central-card svg {
             width: 45px;
             height: 45px;
           }
