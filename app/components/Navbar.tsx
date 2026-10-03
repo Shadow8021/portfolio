@@ -1,25 +1,18 @@
 "use client";
 import { Moon, Sun } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Contenaire from "./Contenaire";
 import Link from "next/link";
 import Image from "next/image";
 
-type Theme = "dark" | "light";
-
 export default function Navbar() {
   const navItems = ["Work", "Skills", "Services", "About", "Contact"];
   const [menuOpen, setMenuOpen] = useState(false);
-  const [theme, setTheme] = useState<Theme>("dark");
-
-  useEffect(() => {
-    setTheme(document.documentElement.dataset.theme === "light" ? "light" : "dark");
-  }, []);
 
   function toggleTheme() {
-    const nextTheme: Theme = theme === "dark" ? "light" : "dark";
+    const nextTheme =
+      document.documentElement.dataset.theme === "light" ? "dark" : "light";
     document.documentElement.dataset.theme = nextTheme;
-    setTheme(nextTheme);
 
     try {
       localStorage.setItem("portfolio-theme", nextTheme);
@@ -68,15 +61,11 @@ export default function Navbar() {
             className="theme-toggle"
             type="button"
             onClick={toggleTheme}
-            aria-label={theme === "dark" ? "Activer le mode clair" : "Activer le mode sombre"}
-            aria-pressed={theme === "light"}
-            title={theme === "dark" ? "Activer le mode clair" : "Activer le mode sombre"}
+            aria-label="Basculer entre les modes clair et sombre"
+            title="Basculer entre les modes clair et sombre"
           >
-            {theme === "dark" ? (
-              <Sun size={18} aria-hidden="true" />
-            ) : (
-              <Moon size={18} aria-hidden="true" />
-            )}
+            <Sun className="theme-icon-light" size={18} aria-hidden="true" />
+            <Moon className="theme-icon-dark" size={18} aria-hidden="true" />
           </button>
           <button
             className="menu-toggle"

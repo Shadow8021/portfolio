@@ -1087,6 +1087,18 @@ h2 em {
   outline-offset: 3px;
 }
 
+.theme-icon-dark {
+  display: none;
+}
+
+:root[data-theme="light"] .theme-icon-light {
+  display: none;
+}
+
+:root[data-theme="light"] .theme-icon-dark {
+  display: block;
+}
+
 .portfolio-project-title,
 .portfolio-project-name {
   color: var(--paper);
