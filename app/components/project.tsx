@@ -93,7 +93,7 @@ export default function project() {
               className="portfolio-project-card card-hover group rounded-3xl border overflow-hidden"
             >
               <div
-                className={`aspect-video bg-[url(${el.mage})] object-cover relative overflow-hidden`}
+                className={`aspect-video bg-[url(${el.image})] object-cover relative overflow-hidden`}
               >
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-6xl">
