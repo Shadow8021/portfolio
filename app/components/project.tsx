@@ -5,7 +5,7 @@ export default function project() {
       titre: "Congo-sphere",
       image: "/spher.png",
       descript:
-        "Plateforme de gestion d'éeènement réel avec visualisation de données avancée et rapports automatisés.",
+        "Plateforme de gestion d'évènement réel avec visualisation de données avancée et rapports automatisés.",
       tech: [
         {
           bg: "bg-cyan-500/10",
