@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function project() {
   const infos = [
     {
@@ -92,15 +94,15 @@ export default function project() {
               key={el.id}
               className="portfolio-project-card card-hover group rounded-3xl border overflow-hidden"
             >
-              <div
-                className={`aspect-video bg-[url(${el.image})] object-cover relative overflow-hidden`}
-              >
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-6xl">
-                    <span className="text-sm">{el.titre}</span>
-                  </div>
-                </div>
-                <div className="portfolio-project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+              <div className="relative aspect-video overflow-hidden">
+                <Image
+                  src={el.image}
+                  alt={`Aperçu du projet ${el.titre}`}
+                  fill
+                  sizes="(max-width: 768px) 90vw, (max-width: 1280px) 45vw, 30vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="portfolio-project-overlay absolute inset-0 z-10 flex items-center justify-center gap-4 opacity-0 transition-opacity group-hover:opacity-100">
                   <a
                     href="#"
                     className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors"
