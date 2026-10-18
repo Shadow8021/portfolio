@@ -796,6 +796,7 @@ h2 em {
     flex-direction: column;
     gap: 18px;
     border-radius: 20px;
+    border: solid rgba(216, 172, 28, 0.805) 1px;
   }
 
   .nav-links.is-open {

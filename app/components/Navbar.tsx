@@ -1,5 +1,5 @@
 "use client";
-import { Moon, Sun } from "lucide-react";
+import { Moon, Sun, Menu, X } from "lucide-react";
 import { useState } from "react";
 import Contenaire from "./Contenaire";
 import Link from "next/link";
@@ -74,7 +74,7 @@ export default function Navbar() {
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            <span /> <span />
+            {menuOpen ? <X /> : <Menu />}
           </button>
         </div>
       </Contenaire>
