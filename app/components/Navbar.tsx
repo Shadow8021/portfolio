@@ -27,7 +27,7 @@ export default function Navbar() {
         <a className="logo" href="#top" aria-label="Retour en haut">
           <div className="flex flex-col items-center justify-center h-auto">
             <Image
-              src={"/ico.png"}
+              src={"/lbg.png"}
               alt="logo"
               width={100}
               height={100}
