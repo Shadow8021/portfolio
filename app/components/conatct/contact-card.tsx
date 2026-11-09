@@ -66,9 +66,9 @@ export function ContactCard(): ReactNode {
                   <em>Faisons-la exister.</em>
                 </h2>
                 <p className="contact-card-description mb-6 max-w-[29ch] text-[15px] md:text-[18px] leading-[1.4] tracking-tight sm:text-[22px]">
-                  I&rsquo;m always open to discussing new projects, creative
-                  ideas, or opportunities to be part of your visions. Just reach
-                  out!
+                  Je suis toujours ouvert aux nouveaux projets, aux idées
+                  créatives et aux opportunités de contribuer à des produits
+                  ambitieux. Contactez-moi !
                 </p>
 
                 <ContactCardCtas />

@@ -2,9 +2,9 @@ import React from "react";
 const serves = [
   {
     id: 1,
-    nom: "Web apps",
+    nom: "Applications web",
     descript:
-      "Des produits web robustes, de l&apos;API à l&apos;interface, pensés pour durer et grandir.",
+      "Des produits web robustes, de l'API à l'interface, pensés pour durer et évoluer.",
   },
   {
     id: 2,

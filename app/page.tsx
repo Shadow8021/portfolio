@@ -154,9 +154,7 @@ export default function Home() {
 
       <Carrousel />
 
-      <section id="services">
-        <Services />
-      </section>
+      <Services />
       <section className="mt-10 mx-auto max-w-[88%]" id="contact">
         <ContactCard />
       </section>
@@ -217,9 +215,9 @@ export default function Home() {
               </svg>
             </div>
 
-            <h1 className="mb-2 font-cinzel text-3xl font-bold tracking-wider text-[#d4af37] md:text-4xl">
+            <h2 className="mb-2 font-cinzel text-3xl font-bold tracking-wider text-[#d4af37] md:text-4xl">
               Parcours full-stack
-            </h1>
+            </h2>
 
             <p className="font-crimson text-lg italic text-[#c9a959]">
               2020 — aujourd&apos;hui · 6 ans d&apos;expérience
