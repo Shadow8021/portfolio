@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from "motion/react";
 
 export default function project() {
   const infos = [
@@ -89,10 +90,19 @@ export default function project() {
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {infos.map((el) => (
-            <div
+          {infos.map((el, index) => (
+            <motion.div
               key={el.id}
               className="portfolio-project-card card-hover group rounded-3xl border overflow-hidden"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -6 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{
+                duration: 0.65,
+                delay: index * 0.12,
+                ease: "easeOut",
+              }}
             >
               <div className="relative aspect-video overflow-hidden">
                 <Image
@@ -155,7 +165,7 @@ export default function project() {
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

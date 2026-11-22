@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { MotionConfig, motion } from "motion/react";
 import Timeline from "./components/Timeline";
 import { ContactCard } from "./components/conatct/contact-card";
 import Services from "./components/services";
@@ -7,6 +8,23 @@ import Carrousel from "./components/carrousel";
 import NetworkAnimation from "./components/ui/anime";
 import TextType from "./components/ui/TextType";
 import Project from "./components/project";
+
+const heroVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.14 },
+  },
+};
+
+const heroItemVariants = {
+  hidden: { opacity: 0, y: 18 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: "easeOut" as const },
+  },
+};
 
 export default function Home() {
   const skill = [
@@ -19,7 +37,7 @@ export default function Home() {
     {
       id: 2,
       name: "Backend",
-      description: "Node.js · NestJS · PostgreSQL · MySQL · Laravel",
+      description: "Node.js · NestJS · PostgreSQL · MySQL · Laravel · MongoDB ",
     },
     {
       id: 4,
@@ -28,13 +46,19 @@ export default function Home() {
     },
   ];
   return (
-    <main>
+    <MotionConfig reducedMotion="user">
+      <main>
       <section className="hero section-wrap" id="top">
-        <div className="hero-copy">
-          <p className="eyebrow">
+        <motion.div
+          className="hero-copy"
+          variants={heroVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.p className="eyebrow" variants={heroItemVariants}>
             <span className="status-dot" /> Disponible pour de nouveaux projets
-          </p>
-          <div className="min-h-48 ">
+          </motion.p>
+          <motion.div className="min-h-48" variants={heroItemVariants}>
             <h1 className="">
               <em>
                 <TextType
@@ -52,23 +76,28 @@ export default function Home() {
                 />
               </em>
             </h1>
-          </div>
+          </motion.div>
 
-          <p className="hero-intro">
+          <motion.p className="hero-intro" variants={heroItemVariants}>
             Développeur full-stack spécialisé dans les expériences web et
             mobiles. Je transforme les idées ambitieuses en outils simples,
             rapides et mémorables.
-          </p>
-          <div className="hero-actions">
+          </motion.p>
+          <motion.div className="hero-actions" variants={heroItemVariants}>
             <a className="button button-dark" href="#work">
               Voir mes projets <span>↓</span>
             </a>
             <a className="text-link" href="#contact">
               Parlons de votre idée <span>↗</span>
             </a>
-          </div>
-        </div>
-        <div className="hero-aside">
+          </motion.div>
+        </motion.div>
+        <motion.div
+          className="hero-aside"
+          initial={{ opacity: 0, scale: 0.96, y: 16 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 0.25, ease: "easeOut" }}
+        >
           <div className="portrait-frame scale-100 rounded-tl-[3.4rem] rounded-br-[3.4rem] rounded-tr-[1.9px] overflow-hidden relative">
             <Image
               src="/mart.jpg"
@@ -82,13 +111,25 @@ export default function Home() {
             <span>Based in</span>
             <strong>Brazzaville / Congo</strong>
           </div>
-        </div>
-        <div className="scroll-cue">
+        </motion.div>
+        <motion.div
+          className="scroll-cue"
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+        >
           Scroll to explore <span>↓</span>
-        </div>
+        </motion.div>
       </section>
 
-      <section className="intro-band" id="about">
+      <motion.section
+        className="intro-band"
+        id="about"
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
         <div className="section-wrap">
           <p className="section-label">01 / À propos</p>
           <div className="intro-layout flex flex-col items-center gap-8 lg:flex-row lg:items-center lg:justify-between">
@@ -107,17 +148,31 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      <section className="work section-wrap " id="work">
+      <motion.section
+        className="work section-wrap"
+        id="work"
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.15 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
         <div className="section-heading">
           <p className="section-label">02 / Projets sélectionnés</p>
           <span>Une sélection récente — 2023 / 2025</span>
         </div>
         <Project />
-      </section>
+      </motion.section>
 
-      <section className=" my-10 section-wrap" id="skills">
+      <motion.section
+        className="my-10 section-wrap"
+        id="skills"
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.15 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
         <div className="section-heading">
           <p className="section-label">03 / Compétences</p>
           <span>Les outils que j&apos;utilise au quotidien</span>
@@ -137,8 +192,19 @@ export default function Home() {
             </p>
           </div>
           <div className="skill-groups">
-            {skill.map((item) => (
-              <div className="skill-group" key={item.id}>
+            {skill.map((item, index) => (
+              <motion.div
+                className="skill-group"
+                key={item.id}
+                initial={{ opacity: 0, x: 18 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.4 }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.12,
+                  ease: "easeOut",
+                }}
+              >
                 <span className="skill-index">
                   {String(item.id).padStart(2, "0")}
                 </span>
@@ -146,20 +212,33 @@ export default function Home() {
                   <h3>{item.name}</h3>
                   <p>{item.description}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       <Carrousel />
 
       <Services />
-      <section className="mt-10 mx-auto max-w-[88%]" id="contact">
+      <motion.section
+        className="mt-10 mx-auto max-w-[88%]"
+        id="contact"
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.15 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
         <ContactCard />
-      </section>
+      </motion.section>
 
-      <div className="timeline-shell bg-papyrus min-h-screen w-full overflow-auto">
+      <motion.div
+        className="timeline-shell bg-papyrus min-h-screen w-full overflow-auto"
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.05 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
         <header className="relative px-4 py-8 text-center">
           <div className="absolute inset-0 overflow-hidden">
             <div
@@ -226,7 +305,8 @@ export default function Home() {
         </header>
 
         <Timeline />
-      </div>
-    </main>
+      </motion.div>
+      </main>
+    </MotionConfig>
   );
 }

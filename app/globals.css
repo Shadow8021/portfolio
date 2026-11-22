@@ -389,12 +389,21 @@ h2 em {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   .tech-marquee-track {
     animation: none;
   }
 
   .tech-marquee-list[aria-hidden="true"] {
     display: none;
+  }
+
+  .animate-fade-in,
+  .timeline-dot {
+    animation: none;
   }
 }
 
