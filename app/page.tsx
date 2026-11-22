@@ -19,7 +19,7 @@ export default function Home() {
     {
       id: 2,
       name: "Backend",
-      description: "Node.js · NestJS · PostgreSQL · MySQL · Laravel",
+      description: "Node.js · NestJS · PostgreSQL · MySQL · Laravel · MongoDB ",
     },
     {
       id: 4,
