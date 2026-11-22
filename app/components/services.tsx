@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "motion/react";
 const serves = [
   {
     id: 1,
@@ -28,12 +29,23 @@ export default function Services() {
       </div>
 
       <div className="service-grid ">
-        {serves.map((el) => (
-          <div key={el.id} className="mb-10">
+        {serves.map((el, index) => (
+          <motion.div
+            key={el.id}
+            className="mb-10"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{
+              duration: 0.6,
+              delay: index * 0.12,
+              ease: "easeOut",
+            }}
+          >
             <span className="service-index">{el.id}</span>
             <h3>{el.nom}</h3>
             <p>{el.descript}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
