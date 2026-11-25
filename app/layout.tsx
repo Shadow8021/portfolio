@@ -16,13 +16,17 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,
-  title: "Développeur full-stack web & mobile à Brazzaville | Martial OYAGA",
+  title: " Martial OYAGA | Développeur full-stack web & mobile",
   description:
     "Martial OYAGA, développeur full-stack à Brazzaville (Congo) : conception d’applications web et mobiles, d’API performantes et accompagnement technique.",
   applicationName: "Portfolio de Martial OYAGA",
   authors: [{ name: "Martial OYAGA", url: siteUrl }],
   creator: "Martial OYAGA",
   keywords: [
+    "oyaga",
+    "Gregor OYAGA",
+    "G'Martial OYAGA",
+    "Gregor Martial OYAGA",
     "Martial OYAGA",
     "développeur full-stack",
     "développeur web",
