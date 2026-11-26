@@ -107,11 +107,15 @@ const structuredData = {
         "TypeScript",
         "Node.js",
         "Flutter",
+        "Linux",
+        "Cybersécurité",
       ],
       sameAs: [
         "https://www.linkedin.com/in/gregor-martial-oyaga-5779b9311/",
         "https://github.com/Shadow8021",
         "https://www.facebook.com/gregoroyaga3.0/",
+        "https://x.com/GregOyaga82840",
+        "https://www.instagram.com/gregoroyaga3.0/",
       ],
     },
     {
