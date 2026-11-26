@@ -1,5 +1,4 @@
 import type { MetadataRoute } from "next";
-import { siteUrl } from "./seo";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -7,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: new URL("/sitemap.xml", siteUrl).href,
+    sitemap: "https://martial-oyaga.vercel.app/sitemap.xml",
   };
 }
