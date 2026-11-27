@@ -59,10 +59,7 @@ export default function Home() {
               <span className="status-dot" /> Disponible pour de nouveaux
               projets
             </motion.p>
-            <motion.h1
-              className="text-red-500 lg:text-nowrap "
-              variants={heroItemVariants}
-            >
+            <motion.h1 className="lg:text-nowrap " variants={heroItemVariants}>
               G&apos;Martial OYAGA
             </motion.h1>
             <motion.div className="min-h-18" variants={heroItemVariants}>
